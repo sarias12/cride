@@ -30,6 +30,11 @@ ROOT_URLCONF = 'config.urls'
 # WSGI
 WSGI_APPLICATION = 'config.wsgi.application'
 
+
+# Users & Authentications
+AUTH_USER_MODEL = 'users.User'
+
+
 # Apps
 DJANGO_APPS = [
     'django.contrib.auth',
@@ -42,8 +47,11 @@ DJANGO_APPS = [
 
 THIRD_PARTY_APPS = [
 ]
+
 LOCAL_APPS = [
+    'cride.users.apps.UsersAppConfig'
 ]
+
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 # Passwords
